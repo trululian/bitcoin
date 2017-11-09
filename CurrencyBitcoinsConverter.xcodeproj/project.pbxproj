@@ -12,6 +12,7 @@
 		8D341AD61FAAB1FA003FDB68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D341AD41FAAB1FA003FDB68 /* Main.storyboard */; };
 		8D341AD81FAAB1FA003FDB68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D341AD71FAAB1FA003FDB68 /* Assets.xcassets */; };
 		8D341ADB1FAAB1FA003FDB68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D341AD91FAAB1FA003FDB68 /* LaunchScreen.storyboard */; };
+		8DB1BC981FB3EF1400FBAC50 /* Modelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1BC971FB3EF1400FBAC50 /* Modelo.swift */; };
 		A5E1377CC8DF4344D608222A /* Pods_CurrencyBitcoinsConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153199D271377CDD4FFAB7FB /* Pods_CurrencyBitcoinsConverter.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		8D341AD71FAAB1FA003FDB68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D341ADA1FAAB1FA003FDB68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D341ADC1FAAB1FA003FDB68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DB1BC971FB3EF1400FBAC50 /* Modelo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Modelo.swift; path = ../Modelo.swift; sourceTree = "<group>"; };
 		FB27DE2D9C3187BAA2E9506B /* Pods-CurrencyBitcoinsConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyBitcoinsConverter.release.xcconfig"; path = "Pods/Target Support Files/Pods-CurrencyBitcoinsConverter/Pods-CurrencyBitcoinsConverter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				8D341AD01FAAB1FA003FDB68 /* AppDelegate.swift */,
+				8DB1BC971FB3EF1400FBAC50 /* Modelo.swift */,
 				8D341AD21FAAB1FA003FDB68 /* ViewController.swift */,
 				8D341AD41FAAB1FA003FDB68 /* Main.storyboard */,
 				8D341AD71FAAB1FA003FDB68 /* Assets.xcassets */,
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB1BC981FB3EF1400FBAC50 /* Modelo.swift in Sources */,
 				8D341AD31FAAB1FA003FDB68 /* ViewController.swift in Sources */,
 				8D341AD11FAAB1FA003FDB68 /* AppDelegate.swift in Sources */,
 			);
@@ -382,6 +386,7 @@
 				8D341AE11FAAB1FA003FDB68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
