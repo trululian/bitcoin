@@ -7,29 +7,31 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
+//import Alamofire
+//import SwiftyJSON
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var PriceLabel: UILabel!
     @IBOutlet weak var CurrencyPicker: UIPickerView!
     
-    let currenciesArray = ["AUD","BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","COP","USD","ARS"]
+    private var ModeloBit = Modelo ()
+   /* let currenciesArray = ["AUD","BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","COP","USD","ARS"]
     let CurrencyArray =
         ["$", "R$", "$", "¥", "€", "£", "$", "Rp", "₪", "₹", "¥", "$", "kr", "$", "zł", "lei", "₽", "$",  "$", "R"]
     
     let Baseurl = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC"
     let fmt = NumberFormatter()
     var finalURL : String?
-    var signo : String?
+    var signo : String?*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         CurrencyPicker.delegate = self
         CurrencyPicker.dataSource = self
-        fmt.numberStyle = .decimal
+        ModeloBit.fmt.numberStyle = .decimal
+         //PriceLabel.text = ModeloBit.answer
         
     }
     
@@ -38,18 +40,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return currenciesArray.count
+        return ModeloBit.currenciesArray.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return currenciesArray[row]
+        return ModeloBit.currenciesArray[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(currenciesArray[row])
-        finalURL = Baseurl + currenciesArray[row]
-        signo = CurrencyArray[row]
-        getBitcoinData(url: finalURL! )
+        print(ModeloBit.currenciesArray[row])
+        ModeloBit.finalURL = ModeloBit.Baseurl + ModeloBit.currenciesArray[row]
+        ModeloBit.signo = ModeloBit.CurrencyArray[row]
+        ModeloBit.getBitcoinData(url: ModeloBit.finalURL! )
+        PriceLabel.text = ModeloBit.answer
         
     }
     
@@ -60,7 +63,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     //MARK: - NETWORKING
     
-    func getBitcoinData(url: String){
+   /* func getBitcoinData(url: String){
         Alamofire.request(url,method: .get).responseJSON { (response) in
             if response.result.isSuccess {
                 let bitCoinJSON: JSON = JSON(response.result.value!)
@@ -78,7 +81,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }else{
             PriceLabel.text =  "servicio no Disponible"
         }
-    }
+    }*/
     
     
         
